@@ -9,17 +9,17 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     source.connect(analyser);
     
     const dataArray = new Uint8Array(analyser.frequencyBinCount);
-    const threshold = 70; // Adjust this value based on your desired threshold
+    const threshold = 100; // Adjust this value based on your desired threshold
     
     const detectSound = () => {
       analyser.getByteFrequencyData(dataArray);
       const average = dataArray.reduce((a, b) => a + b) / dataArray.length;
       if (average > threshold) {
         console.log("sound");
-        const audio = new Audio('sound3.wav');
+        const audio = new Audio('sound2.wav');
         audio.play();
         //sound3.play();
-        checkDots3();
+        checkDots2();
       }
       requestAnimationFrame(detectSound);
     };
@@ -29,10 +29,6 @@ navigator.mediaDevices.getUserMedia({ audio: true })
   .catch(err => {
     console.error('Error accessing the microphone: ', err);
   });
-
-
-
-
     const player = document.getElementById('player');
     const player2 = document.getElementById('player2');
     const player3 = document.getElementById('player3');
@@ -87,7 +83,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     function checkDots() {
         dots.forEach(dot => {
             if (Math.abs(playerPosition - dot.offsetLeft) < 30) { // More lenient timing
-                dot.style.backgroundColor = 'green';
+                dot.style.backgroundColor = 'white';
                 if (autoplay) {
                     sound.play();
                 }
@@ -98,7 +94,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     function checkDots2() {
         dots2.forEach(dot2 => {
             if (Math.abs(player2Position - dot2.offsetLeft) < 30) { // More lenient timing
-                dot2.style.backgroundColor = 'green';
+                dot2.style.backgroundColor = 'white';
                 if (autoplay) {
                     sound2.play();
                 }
@@ -109,7 +105,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     function checkDots3() {
         dots3.forEach(dot3 => {
             if (Math.abs(player3Position - dot3.offsetLeft) < 30) { // More lenient timing
-                dot3.style.backgroundColor = 'green';
+                dot3.style.backgroundColor = 'white';
                 if (autoplay) {
                     sound3.play();
                 }

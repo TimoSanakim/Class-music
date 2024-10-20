@@ -8,6 +8,18 @@ body {
     background-color: #282c34;
 }
 
+#startButton{
+    background-color: #61dafb;
+}
+
+#startButton2{
+    background-color: #61fb63;
+}
+
+#startButton3{
+    background-color: #fb6161;
+}
+
 .line {
     position: relative;
     width: 90%;
@@ -28,7 +40,7 @@ body {
     position: relative;
     width: 90%;
     height: 10px;
-    background-color: #fb6161;
+    background-color: #ff9b9b;
     margin-top: 40px;
 }
 
@@ -36,7 +48,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: rgb(63, 106, 200);
     border-radius: 50%;
     top: -5px; /* Center the dot on the line */
     z-index: 2; /* Ensure dots are above the player */
@@ -46,7 +58,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: rgb(16, 172, 26);
     border-radius: 50%;
     top: -5px; /* Center the dot on the line */
     z-index: 2; /* Ensure dots are above the player */
@@ -56,7 +68,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: rgb(193, 37, 37);
     border-radius: 50%;
     top: -5px; /* Center the dot on the line */
     z-index: 2; /* Ensure dots are above the player */
@@ -75,9 +87,20 @@ body {
 #dot3Line2{ left: 75%; }
 
 
-#dot1Line3{ left: 30%; }
-#dot2Line3{ left: 60%; }
-#dot3Line3{ left: 90%; }
+#dot1Line3{ left: 20%; }
+#dot2Line3{ left: 30%; }
+#dot3Line3{ left: 50%; 
+    background-color: rgb(63, 106, 200);
+}
+#dot4Line3{ left: 60%; 
+    background-color: rgb(63, 106, 200);
+}
+#dot5Line3{ left: 80%; 
+    background-color: rgb(16, 172, 26);
+}
+#dot6Line3{ left: 90%; 
+    background-color: rgb(16, 172, 26);
+}
 
 
 .player {
